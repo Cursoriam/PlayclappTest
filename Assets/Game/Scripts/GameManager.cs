@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.transform.position = spawnPoint;
+        cube.GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f),
+            Random.Range(0f, 1f));
         StartCoroutine(MoveAndDestroyAfter(cube));
     }
 
